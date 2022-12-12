@@ -7,4 +7,6 @@ RSpec.describe "diary" do
       expect(my_diary.all).to eq []
     end
   end
+
+  
 end
