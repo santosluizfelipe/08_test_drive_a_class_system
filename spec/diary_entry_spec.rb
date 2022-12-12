@@ -24,4 +24,10 @@ RSpec.describe "diary_entry" do
     my_entry = DiaryEntry.new("Title", "time it takes to read this")
     expect(my_entry.reading_time(60)).to eq 0.1
   end
+
+  it "returns a string that you can read in the time available" do
+    my_entry = DiaryEntry.new("Title", "time it takes to read this")
+    expect(my_entry.reading_chunk(2,1)).to eq "time it"
+  end
+
 end
