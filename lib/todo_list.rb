@@ -1,6 +1,7 @@
 class TodoList
   def initialize
     @incomplete = []
+    @complete = []
   end
 
   def add(todo) 
@@ -12,7 +13,7 @@ class TodoList
   end
 
   def complete
-    # returns complete
+    @complete
   end
 
   def give_up!

@@ -8,8 +8,8 @@ class Todo
   end
 
   def mark_done!
-    # Marks the todo as done
-    # Returns nothing
+    done_tasks = []
+    done_tasks << @task
   end
 
   def done?

@@ -9,5 +9,19 @@ RSpec.describe "todo_list" do
       my_todo.add(first_todo)
       expect(my_todo.incomplete).to eq [first_todo]
     end
+
+    it "adding item to do list and returning the complete array" do
+      my_todo = TodoList.new()
+      first_todo = Todo.new("Walk the dog")
+      my_todo.add(first_todo)
+      expect(my_todo.complete).to eq []
+    end
+
+    it "mark_done! method behavior" do
+      my_todo = TodoList.new()
+      first_todo = Todo.new("Walk the dog")
+      my_todo.add(first_todo)
+      expect(first_todo.mark_done!).to eq ["Walk the dog"]
+    end
   end
 end
