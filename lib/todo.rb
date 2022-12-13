@@ -1,19 +1,18 @@
 class Todo
   def initialize(task)
     @task = task
+    @complete = false
   end
 
   def task
-    return @task
+    @task
   end
 
   def mark_done!
-    done_tasks = []
-    done_tasks << @task
+    @complete = true
   end
 
   def done?
-    # Returns true if the task is done
-    # Otherwise, false
+    @complete
   end
 end
